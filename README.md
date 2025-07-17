@@ -28,9 +28,9 @@ A comprehensive BI solution leveraging Microsoft's data platform for analytics a
 
 ## 🔄 Implementation Workflow
 
-```mermaid
-    A[Source Systems] -->|SSIS Extract| B[Staging Area]
-    B -->|SSIS Transform| C[Data Warehouse]
-    C -->|SSAS Model| D[OLAP Cube]
-    D -->|Excel Pivot| E[Operational Reports]
-    D -->|DAX Measures| F[Power BI Dashboards]
+Source Systems → (Extracted via SSIS) → Staging Area
+Staging Area → (Transformed via SSIS) → Data Warehouse
+Data Warehouse → (Modeled in SSAS) → OLAP Cube
+OLAP Cube → (Used in):
+Excel Pivot Tables → Operational Reports
+Power BI Dashboards 
